@@ -14,8 +14,6 @@ A Python application that connects to your Gmail using OAuth2, reads historical 
 
 📂 Project Structure
 graphql
-Copy
-Edit
 gmail_exporter/
 │
 ├── email_exporter.py        # Main script to run the exporter
