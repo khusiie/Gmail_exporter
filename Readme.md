@@ -1,6 +1,7 @@
 # 📧 Gmail Email Exporter
+
 Automated Gmail Attachment and Email Data Exporter is a Python-based utility designed to streamline the process of retrieving and organizing email data from Gmail accounts. Using secure OAuth2 authentication, the tool connects to a user’s Gmail, reads historical emails, and extracts metadata such as date, sender, recipient, subject, and body content. It intelligently filters emails based on customizable criteria (e.g., date range, sender, keywords, attachments), downloads any attachments, and exports the processed data to an Excel file.
-Attachments are saved in a structured folder format (e.g., by date), making it easy to manage and review. The project is built with data privacy and modularity in mind, ensuring secure token handling and easy extensibility. Ideal for personal productivity, audit trails, or business record-keeping, this tool automates a task that would otherwise be time-consuming and error-prone.
+
 ---
 
 
