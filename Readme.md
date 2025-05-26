@@ -26,7 +26,9 @@ gmail_exporter/
 ├── attachments/             # Folder where attachments are saved
 ├── email_export.xlsx        # Output Excel file
 ├── requirements.txt         # Python dependencies
-└── README.md                # This documentation file
+└── README.md              # This documentation file
+
+
 🛠 Requirements
 Python 3.7+
 
@@ -37,16 +39,14 @@ credentials.json (OAuth2 client secret)
 📦 Installation & Setup
 1. Clone the Repository
 bash
-Copy
-Edit
 git clone https://github.com/yourusername/gmail-exporter.git
 cd gmail-exporter
-2. Install Dependencies
+
+3. Install Dependencies
 bash
-Copy
-Edit
 pip install -r requirements.txt
-3. Set Up Google OAuth2
+
+5. Set Up Google OAuth2
 Go to the Google Cloud Console.
 
 Enable the Gmail API.
