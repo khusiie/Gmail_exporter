@@ -76,21 +76,6 @@ text
    ├── 2025-05-01_Interview_Confirmation.eml
    └── 2025-05-03_Feedback_Response.eml
 
-🧪 Example Output
-📂 Folder Structure
-lua
-Copy
-Edit
-gmail_exporter/
-├── attachments/
-│   └── 2025-05-26/
-│       └── resume.pdf
-├── exported_data/
-│   └── email_export.xlsx
-📄 Excel Columns
-Date	Sender	Recipient	Subject	Body Preview	Attachment File Names
-2025-05-20	boss@corp.com	me@gmail.com	Meeting Notes	Please see attach	notes.pdf
-
 🎛️ Filter Options
 You can set filters for:
 
@@ -130,8 +115,10 @@ exported_data/
 
 ✅ README.md with setup and usage guide
 
+
 🧑‍💻 Author
 Khushi Gupta
+
 
 
 🙌 Acknowledgements
