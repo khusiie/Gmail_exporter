@@ -78,41 +78,30 @@ text
 
 🎛️ Filter Options
 You can set filters for:
-
 Date range: last N days or custom start/end
-
 Specific sender or recipient
-
 Keywords in subject
-
 Emails with/without attachments
 
 🔐 Security Notes
 Never share your credentials.json or token.json
-
 token.json and credentials.json are listed in .gitignore
-
 OAuth tokens are stored securely for future runs
-
 Use .env to manage secrets securely
 
 🚫 .gitignore
 pgsql
-Copy
-Edit
 token.json
 credentials.json
 .env
 __pycache__/
 attachments/
 exported_data/
+
 📎 Sample Deliverables
 ✅ email_export.xlsx in exported_data/
-
 ✅ Attachments folder structured by date
-
 ✅ Fully working code with modular structure
-
 ✅ README.md with setup and usage guide
 
 
