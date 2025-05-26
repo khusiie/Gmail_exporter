@@ -1,57 +1,123 @@
+📧 Automated Gmail Attachment and Email Data Exporter
+A Python application that connects to your Gmail using OAuth2, reads historical emails, extracts attachments, and exports email content + metadata into an Excel file. All attachments are downloaded into structured folders.
 
-# 📧 Automated Gmail Attachment and Email Data Exporter
+📌 Features
+🔒 Secure Google OAuth2 Authentication
 
-A secure and efficient Python application that connects to a Gmail account via OAuth2, fetches historical emails with filter options, extracts metadata, downloads attachments, and exports the data to an Excel file. Attachments are organized in structured folders.
+📥 Fetches all or filtered historical emails (e.g., by date, sender, subject)
 
----
+📎 Downloads attachments and organizes them by date
 
-## 🎯 Objective
+📊 Exports email data (sender, recipient, subject, body) to Excel
 
-Build a reliable tool to automate the following:
-- Access Gmail using OAuth2.
-- Fetch all or filtered historical emails.
-- Extract metadata and email content.
-- Download attachments.
-- Export data to an Excel spreadsheet.
-- Organize attachments by date.
+✅ Simple CLI interface for filtering and control
 
----
+📂 Project Structure
+graphql
+Copy
+Edit
+gmail_exporter/
+│
+├── email_exporter.py        # Main script to run the exporter
+├── gmail_auth.py            # Handles OAuth2 authentication
+├── gmail_fetcher.py         # Fetching logic for emails and attachments
+├── token.json               # Stores user's OAuth access/refresh token
+├── credentials.json         # Google OAuth client credentials
+├── attachments/             # Folder where attachments are saved
+├── email_export.xlsx        # Output Excel file
+├── requirements.txt         # Python dependencies
+└── README.md                # This documentation file
+🛠 Requirements
+Python 3.7+
 
-## 🛠️ Key Features
+Gmail API enabled on your Google Cloud project
 
-### 1. 🔐 Gmail Access & Authentication
-- Secure authentication via **Google OAuth2**.
-- Minimal permission scope (`gmail.readonly` or `gmail.modify`) for privacy and security.
-- OAuth tokens are saved securely (`token.json`).
+credentials.json (OAuth2 client secret)
 
-### 2. 📬 Email Fetching
-- Supports reading from inbox, sent mail, etc.
-- Flexible filter options:
-  - **Date range** (last 30 days or custom).
-  - **Sender/Recipient** email.
-  - **Subject** keywords.
-  - **Attachments-only** option.
+📦 Installation & Setup
+1. Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/gmail-exporter.git
+cd gmail-exporter
+2. Install Dependencies
+bash
+Copy
+Edit
+pip install -r requirements.txt
+3. Set Up Google OAuth2
+Go to the Google Cloud Console.
 
-### 3. 📎 Attachment Handling
-- Detect and download all email attachments.
-- Save them in structured format:
+Enable the Gmail API.
 
+Create OAuth 2.0 Client ID credentials.
 
-# Automated Gmail Attachment and Email Exporter
+Download the credentials.json file and place it in the project directory.
 
-## Features
-- Authenticate securely via OAuth2.
-- Fetch emails with filters (date, sender, attachment).
-- Download and save attachments in structured folders.
-- Export email metadata and content to Excel.
+🚀 Run the Application
+bash
+Copy
+Edit
+python email_exporter.py
+You’ll be asked to log in to your Gmail account the first time (a browser window will open).
 
-## Setup
-1. Clone the repo.
-2. Create a project on Google Cloud and enable Gmail API.
-3. Download `credentials.json` and place in root.
-4. Install dependencies: `pip install -r requirements.txt`
-5. Run: `python email_exporter.py`
+After authentication, you'll be prompted to enter a Gmail search query, such as:
 
-## Output
-- Excel: `email_export.xlsx`
-- Folder: `attachments/YYYY-MM-DD/filename.ext`
+bash
+Copy
+Edit
+has:attachment after:2024/01/01 before:2024/05/01
+✅ This fetches all emails within the date range that contain attachments.
+
+⏹ How to Stop the Script
+If you want to interrupt the program while it's running (e.g., during email fetching):
+
+bash
+Copy
+Edit
+Press Ctrl + C
+This sends a KeyboardInterrupt and exits the script safely.
+
+📁 Output
+✅ email_export.xlsx: Contains structured email data:
+
+Date
+
+Sender
+
+Recipient
+
+Subject
+
+Body
+
+Attachment File Names (if any)
+
+✅ attachments/YYYY-MM-DD/: Folder structure for downloaded attachments.
+
+🔐 Security Notes
+OAuth tokens are stored in token.json securely (do not share this file).
+
+No passwords or sensitive data are stored in plain text.
+
+You can revoke access from your Google Account Security page.
+
+✅ Example Output
+Date	Sender	Recipient	Subject	Body (Excerpt)	Attachments
+2024-01-15	invoice@abc.com	your@email.com	Invoice Jan	Please find invoice	invoice.pdf
+
+💡 Future Enhancements (Optional)
+GUI using Tkinter or PyQt
+
+Export to CSV or JSON
+
+Email threading support
+
+Filtering by unread/read/starred
+
+📄 License
+MIT License
+
+🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first.
